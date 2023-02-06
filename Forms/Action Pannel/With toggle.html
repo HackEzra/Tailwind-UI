@@ -1,0 +1,21 @@
+<div class="bg-white shadow sm:rounded-lg">
+  <div class="px-4 py-5 sm:p-6">
+    <h3 class="text-lg leading-6 font-medium text-gray-900" id="renew-headline">
+      Renew subscription automatically
+    </h3>
+    <div class="mt-2 sm:flex sm:items-start sm:justify-between">
+      <div class="max-w-xl text-sm leading-5 text-gray-500">
+        <p id="renew-description">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo totam non cumque deserunt officiis ex maiores nostrum.
+        </p>
+      </div>
+      <div class="mt-5 sm:mt-0 sm:ml-6 sm:flex-shrink-0 sm:flex sm:items-center">
+        <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.0.1/dist/alpine.js" defer></script>
+
+        <span x-data="{ value: false, toggle() { this.value = !this.value } }" :class="{ 'bg-gray-200': !value, 'bg-indigo-600': value }" class="relative inline-block flex-no-shrink h-6 w-11 border-2 border-transparent rounded-full cursor-pointer transition-colors ease-in-out duration-200 focus:outline-none focus:shadow-outline" role="checkbox" tabindex="0" @click="toggle()" @keydown.space.prevent="toggle()" :aria-checked="value.toString()" aria-labelledby="renew-headline" aria-describedby="renew-description">
+          <span aria-hidden="true" :class="{ 'translate-x-5': value, 'translate-x-0': !value }" class="inline-block h-5 w-5 rounded-full bg-white shadow transform transition ease-in-out duration-200"></span>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
